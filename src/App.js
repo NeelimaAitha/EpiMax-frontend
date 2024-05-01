@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import TaskForm from './components/TaskForm';
+import TaskAssignment from './components/TaskAssignment';
+import TaskStatusUpdate from './components/TaskStatusUpdate';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Welcome to Task Management System</h1>
       </header>
+      <main className="App-content">
+        <TaskForm />
+        <TaskAssignment />
+        <TaskStatusUpdate />
+      </main>
     </div>
   );
 }
